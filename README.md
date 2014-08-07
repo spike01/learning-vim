@@ -20,4 +20,11 @@ o: insert line after + insert mode
 O: insert line before + insert mode
 0: start of line  
 $: end of line  
+w: next word  
+e: end of next word
+b: back one word
+r: replace one character
+R: replace many characters
+*: go to next instance of word at cursor  
+
 
