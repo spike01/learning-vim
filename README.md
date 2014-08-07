@@ -2,7 +2,10 @@
 ##One man's journey trying to learn the insanity that is vim.
 
 First, read this: [Coming home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/).  
-Modifications to his setup: tabs set to 2 (apparently Ruby standard). No relativenumber (difficult to debug by line number).
+
+Modifications to his setup: 
+* tabs set to 2 (apparently Ruby standard).  
+* No relativenumber (difficult to debug by line number).
 
 And here we go.  
 
