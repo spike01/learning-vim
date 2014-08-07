@@ -26,5 +26,6 @@ b: back one word
 r: replace one character
 R: replace many characters
 *: go to next instance of word at cursor  
-
+Ctrl-F: page down  
+Ctrl-B: page up
 
