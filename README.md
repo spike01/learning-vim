@@ -4,16 +4,15 @@
 First, read this: [Coming home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/).  
 
 Modifications to his setup: 
-* tabs set to 2 (apparently Ruby standard).  
+* tabs set to 2 (Ruby standard).  
 * No relativenumber (difficult to debug by line number).
 
-And here we go.  
-
+Here we go.  
 
 Total basics:
 
 i: insert mode  
-a: insert after cursor <--- generally more useful that i  
+a: insert after cursor
 Esc (in my cased remapped to jj): return to normal mode  
 hjkl: movement keys  
 o: insert line after + insert mode  
