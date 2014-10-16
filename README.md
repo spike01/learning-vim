@@ -238,6 +238,8 @@ So there you have it. About as much Vim as I can think of right now, please let
 me know if there is any basic stuff I should add.
 
 -Spike
+(with thanks to Dave for awesome formatting, extra comments, occasional snark, and whatnot)
+
 
 Useful links
 ------------
