@@ -43,12 +43,12 @@ text.
 
 `hjkl`: movement keys (because you disabled your arrow keys... right?)
 
+> Dave says: Try using them on the Twitter homepage. Now you're thinking with
+> portals...
+
 `h` and `l` go left and right, `j` goes down and `k` goes up. When I started, I used
 `j` and `k` a lot - in time, I increasingly found myself not using these keys any
 more, as Vim has much more powerful and accurate ways to move around. Such as:
-
-> Dave says: Try using them on the Twitter homepage. Now you're thinking with
-> portals...
 
 - `$`: end of line
 - `0`: start of line
