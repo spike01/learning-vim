@@ -74,7 +74,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>v V`]
 nnoremap <leader>w <C-w>v<C-w>l
-"shortcut to edit vimrc - super useful!
+"shortcut to edit vimrc - super useful
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 autocmd StdinReadPre * let s:std_in=1
 
