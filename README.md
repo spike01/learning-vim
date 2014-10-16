@@ -24,14 +24,14 @@ exactly that - a mode to insert (not edit) text.
 
 Here are the main ways to enter command mode:
 
-i: insert before cursor  
-a: insert after cursor
-o: insert line after + insert mode  
-O: insert line before + insert mode
-A: insert at end of line
-I: insert at start of line
-r: replace one character
-R: replace many characters
+i: insert before cursor    
+a: insert after cursor  
+o: insert line after + insert mode    
+O: insert line before + insert mode  
+A: insert at end of line  
+I: insert at start of line  
+r: replace one character  
+R: replace many characters  
 
 Then, to exit command mode, you can hit Esc, or C-\[. But, that's extra effort
 and takes you off the home row, so many Vim users remap (more about this later)
@@ -47,17 +47,17 @@ h and l go left and right, j goes down and k goes up. When I started, I used
 j and k a lot - in time, I increasingly found myself not using these keys any
 more, as Vim has much more powerful and accurate ways to move around. Such as:
 
-$: end of line  
-0: start of line
-w: next word  
-e: end of next word
-b: back one word
-f(char): find next character
-F(char): find next character backwards
-\*: go to next instance of word at cursor  
-line number + G: go to line number
-gg: top of file
-G: bottom of file
+$: end of line    
+0: start of line  
+w: next word    
+e: end of next word  
+b: back one word  
+f(char): find next character  
+F(char): find next character backwards  
+\*: go to next instance of word at cursor    
+line number + G: go to line number  
+gg: top of file  
+G: bottom of file  
 
 For a cool way to visualize a lot of this movement (and a few extra
 characters), check [this handy
@@ -71,12 +71,12 @@ Brain bleeding yet? Good. So, armed with this, you should already be moving
 faster than Sublime. But, maybe a few more essentials before we get into the
 fun stuff:
 
-:w: write file. You can "save as" by typing :w newfilename  
+:w: write file. You can "save as" by typing :w newfilename    
 :e(filename): open a file. Supports tab completion. If you're making a new file,
 just type :e with what you want the file to be called. (techncally, this is
-actually "open buffer")  
-:q: quit (specifically, quit if there are no changes. Can be forced with :q!)  
-:\x: save and quit  
+actually "open buffer")    
+:q: quit (specifically, quit if there are no changes. Can be forced with :q!)    
+\:x: save and quit    
 
 u: undo  
 C-r: redo  
@@ -124,7 +124,103 @@ For example:
 
 yy: yank line  
 dd: delete line  
-p: paste (or 'put') contents of temp buffer below current line  
-P: put above current line  
+p: paste (or 'put') contents of temp buffer below current line    
+P: put above current line    
+
+You can also select stuff in Visual mode (v) or Visual Line mode (V), which
+will put you in a special mode for highlighting. Also bear in mind that all the
+above commands can be "multiplied" by using numbers in front, so delete 6 lines
+would be 6dd, yank 2 lines 2yy, etc.
+
+If you want to hold stuff for later use, you also have loads of named buffers
+that you can use with the above commands, so for example "add means delete line
+and put it in buffer a. You can then paste using "ap.
+
+You can also Apple-V stuff into Vim in insert mode, which works pretty much how
+you'd expect it to. However, when pasting large blocks of text, Vim does some
+slighly strange indentation stuff, but you can get it to paste nicely with the
+following commands:
+
+:set paste: goes into Paste mode - bear in mind you can only escape from paste
+mode with Esc or C-\[ - this has caught me out before  
+:set nopaste: exit Paste mode - always, always exit paste mode when you're dunpastin', ootherwise Vim starts to act weird.  
+
+Ok, if you're still with me at this stage: awesome! This is where (for me) the
+real good stuff in Vim starts to happen. Vim has certain key combinations that
+work a bit like shortcuts for normal English, applied to text. I know that
+sounds weird, so let me demonstrate:
+
+cw: change until next word (change puts you into insert mode)
+dw: delete until word  
+caw: change a word    
+daw: delete a word  
+ct(character): change to character  
+dt(character): delete to character  
+
+ciw: change inner word  
+yaw: yank a word  
+
+The full list is covered in the [Vim documentation
+here](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects). When you
+get used to these text object commands, your editting will speed up a LOT. 
+
+This should be enough to get you up and running. However, before I leave you
+with a bunch of links to go explore, a few more bonus commands I use all the
+time:
+
+C-z: Suspend Vim (goes back to command line)  
+fg (in command line): foreground suspended process  
+
+These two commands let me hop between Vim and the command line very easily. If
+I need to run just a single command on the command line, I can put a bang before it (e.g. !rspec),
+and then repeat the last command with !!
+
+:(linefrom, lineto)co.: Copies lines to current location. So, for example,
+:15,18co. will copy lines 15 to 18 to where my cursor is at. Super useful for
+being lazy.  
+gg=G: reindent. gg takes you to the top, =G means reindent to the bottom of the
+file. Make sure you install the static vims for the filetypes you will be
+working in, as it usually provides indent information as well.  
+
+Customization
+-------------
+
+Now you have the basic basics. By no means is this list complete, I'm still
+discovering new Vim stuff every week. Hopefully this will get you up and
+running and editing text the Vim way. However, the best way to learn and get the most out
+of your Vim is to customise it. 
+
+I touched briefly on some modifications to the .vimrc based on Steve Losh's "Coming home to Vim" - basically, you can use remaps (nnoremap) to create your own Vim shortcuts. There should be a basic .vimrc in this repo, as well as my personal .vimrc to get you started. Long story short: if you find yourself using a certain combination of keys over and over - remap it. If you don't like how a key behaves, or want it to do slightly more/less - remap it. Do what you need to make your workflow fast and comfortable.
+
+A word about plugins
+-------------------
+
+There are so many plugins for Vim. Seriously. If you can think of it, or if
+another program does it, someone has probably written a plugin for it. I highly
+recommend using Tim Pope's excellent
+[Pathogen](https://github.com/tpope/vim-pathogen) to manage your plugins, and
+here are a few plugins that I use a lot:
+
+[NERDtree](https://github.com/scrooloose/nerdtree) - Gives you a tree
+structure, kinda like the Sublime folder layout, but with a Vim flavour  
+[NERDcommenter](https://github.com/scrooloose/nerdcommenter) - Instant
+commenting, by word, line, or whatever - like Sublime's Apple-?  
+[Golden Ratio](https://github.com/roman/golden-ratio) - Great when you're
+working with splits  
+[EasyMotion](https://github.com/Lokaltog/vim-easymotion) - Insane movement.
+Really, really insane  
+[Airline](https://github.com/bling/vim-airline) - Mentioned above, great
+statusline
 
 
+So there you have it. About as much Vim as I can think of right now, please let
+me know if there is any basic stuff I should add.
+
+Useful links
+------------
+
+[Your problem with Vim is that you don't grok vi.](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)  
+[Vim Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)  
+[Vim Golf](http://www.vimgolf.com/)  
+Type 'vim tutor' in the command line
+[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en)
