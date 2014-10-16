@@ -1,5 +1,5 @@
 #Learning vim
-##One man's journey trying to learn the insanity that is vim.
+##A journey trying to learn the insanity that is vim.
 
 First, read this: [Coming home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
 
@@ -237,14 +237,16 @@ not to fight. Here are a few plugins that I use a lot:
 So there you have it. About as much Vim as I can think of right now, please let
 me know if there is any basic stuff I should add.
 
+-Spike
+
 Useful links
 ------------
 
-[Your problem with Vim is that you don't grok vi.](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
-[Vim Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
-[Vim Golf](http://www.vimgolf.com/)
-Type 'vimtutor' in the command line
-[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - because you will eventually want Vim keybindings for everything
+[Your problem with Vim is that you don't grok vi.](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)  
+[Vim Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)  
+[Vim Golf](http://www.vimgolf.com/)  
+Type 'vimtutor' in the command line  
+[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - because you will eventually want Vim keybindings for everything  
 [Vim for the command
-line](http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal) - see above
+line](http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal) - see above  
 
