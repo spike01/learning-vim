@@ -71,17 +71,17 @@ Brain bleeding yet? Good. So, armed with this, you should already be moving
 faster than Sublime. But, maybe a few more essentials before we get into the
 fun stuff:
 
-:w: write file. You can "save as" by typing :w newfilename
+:w: write file. You can "save as" by typing :w newfilename  
 :e(filename): open a file. Supports tab completion. If you're making a new file,
 just type :e with what you want the file to be called. (techncally, this is
-actually "open buffer")
-:q: quit (specifically, quit if there are no changes. Can be forced with :q!)
-:x: save and quit
+actually "open buffer")  
+:q: quit (specifically, quit if there are no changes. Can be forced with :q!)  
+:\x: save and quit  
 
-u: undo
-C-r: redo
-x: delete under cursor
-.: redo last text-changing command (you'll have to eventually get used to what this means)
+u: undo  
+C-r: redo  
+x: delete under cursor  
+.: redo last text-changing command (you'll have to eventually get used to what this means)  
 
 Maybe it's time to introduce the concept of a buffer. If you're weird and
 interested in Vim's history, read [this short
@@ -97,12 +97,12 @@ First up, I highly recommend installing something like
 have open. Otherwise you'll need to learn yet another command (:ls) to see what
 buffers you have open. Then, you can move around buffers like this:
 
-:b(number): (so, :b1, :b2 etc.) Move to buffer #number.
+:b(number): (so, :b1, :b2 etc.) Move to buffer #number.  
 :b(name): Move to buffer name. Supports partial matching and tab completion
-(usually)
-:bn: next buffer
-:bp: previous buffer
-:bd: close buffer
+(usually)  
+:bn: next buffer  
+:bp: previous buffer  
+:bd: close buffer  
 
 Vim also supports tabs, so you can open a buffer in a new tab with :tabe, and
 then navigate through your buffers with gt (next tab) and :tabp (which
@@ -110,10 +110,10 @@ I strongly recommend remapping)
 
 You can also split your window:
 
-:vsp: vertical split
-:sp: horizonal split
-C-W C-W: switch to next split (recommended remap to Tab!)
-C-W W: previous split
+:vsp: vertical split  
+:sp: horizonal split  
+C-W C-W: switch to next split (recommended remap to Tab!)  
+C-W W: previous split  
 
 So now we can work on multiple files, let's talk about Vim's approach to
 copying and pasting. When you copy (or let's use the Vim term, yank) some text,
@@ -122,9 +122,9 @@ Apple-C/Apple-X, but so much faster when you know what you're doing, because
 you can yank and delete whole lines and chunks of text with a few keystrokes.
 For example:
 
-yy: yank line
-dd: delete line
-p: paste (or 'put') contents of temp buffer below current line
-P: put above current line
+yy: yank line  
+dd: delete line  
+p: paste (or 'put') contents of temp buffer below current line  
+P: put above current line  
 
 
