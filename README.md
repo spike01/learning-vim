@@ -24,14 +24,14 @@ exactly that - a mode to insert (not edit) text.
 
 Here are the main ways to enter command mode:
 
-`i`: insert before cursor
-`a`: insert after cursor
-`o`: insert line after + insert mode
-`O`: insert line before + insert mode
-`A`: insert at end of line
-`I`: insert at start of line
-`r`: replace one character
-`R`: replace many characters
+- `i`: insert before cursor
+- `a`: insert after cursor
+- `o`: insert line after + insert mode
+- `O`: insert line before + insert mode
+- `A`: insert at end of line
+- `I`: insert at start of line
+- `r`: replace one character
+- `R`: replace many characters
 
 Then, to exit command mode, you can hit `Esc,` or `C-[`. But, that's extra effort
 and takes you off the home row, so many Vim users (not Dave) remap (more about this later)
@@ -47,17 +47,17 @@ text.
 `j` and `k` a lot - in time, I increasingly found myself not using these keys any
 more, as Vim has much more powerful and accurate ways to move around. Such as:
 
-`$`: end of line
-`0`: start of line
-`w`: next word
-`e`: end of next word
-`b`: back one word
-`f(char)`: find next character
-`F(char)`: find next character backwards
-`*`: go to next instance of word at cursor
-line number + G: go to line number
-gg: top of file
-G: bottom of file
+- `$`: end of line
+- `0`: start of line
+- `w`: next word
+- `e`: end of next word
+- `b`: back one word
+- `f(char)`: find next character
+- `F(char)`: find next character backwards
+- `*`: go to next instance of word at cursor
+- `line number + G`: go to line number
+- `gg`: top of file
+- `G`: bottom of file
 
 For a cool way to visualize a lot of this movement (and a few extra
 characters), check [this handy
