@@ -4,8 +4,8 @@
 First, read this: [Coming home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
 
 Modifications to his setup:
-* tabs set to 2 (Ruby standard).
-* No relativenumber (difficult to debug by line number).
+- tabs set to 2 (Ruby standard).
+- No relativenumber (difficult to debug by line number).
 
 Definitely disable your arrow keys. Otherwise you'll end up relying on them,
 instead of using the awesome motion commands that make Vim what it is.
@@ -63,7 +63,7 @@ more, as Vim has much more powerful and accurate ways to move around. Such as:
 - `G`: bottom of file
 
 For a cool way to visualize a lot of this movement (and a few extra
-characters), check [this handy
+  characters), check [this handy
 wallpaper](http://inside.github.io/vim-presentation/images/vim-move-shortcuts.png) out.
 
 Also: most movements (and in fact, a lot of other stuff in Vim) can be modified
@@ -75,23 +75,24 @@ faster than Sublime. But, maybe a few more essentials before we get into the
 fun stuff:
 
 - `:w`: write file. You can "save as" by typing :w newfilename
-- `:e(filename)`: open a file. Supports tab completion. If you're making a new file,
-just type :e with what you want the file to be called. (techncally, this is
-actually "open buffer")
-- `:q`: quit (specifically, quit if there are no changes. Can be forced with :q!)
+- `:e(filename)`: open a file. Supports tab completion. If you're making a new
+  file, just type :e with what you want the file to be called. (techncally, this
+  is actually "open buffer")
+- `:q`: quit (specifically, quit if there are no changes. Can be forced with
+  :q!)
 - `:x` or `ZZ`: save and quit (remove the space, Markdown autoformats it)
-
 - `u`: undo
 - `C-r`: redo
 - `x`: delete under cursor
-- `.`: redo last text-changing command (you'll have to eventually get used to what this means)
+- `.`: redo last text-changing command (you'll have to eventually get used to
+  what this means)
 
 Maybe it's time to introduce the concept of a buffer. If you're weird and
 interested in Vim's history, read [this short
 article](http://blog.sanctum.geek.nz/actually-using-ed/) on ed, Vim's ancestor,
 which will give you an idea of why buffers are used (tl;dr: back in the days of
-ancient computers, reading and saving files over a remote connection was SLOW,
-so you need a space in which to load and edit your text - i.e. a buffer).
+  ancient computers, reading and saving files over a remote connection was SLOW,
+  so you need a space in which to load and edit your text - i.e. a buffer).
 Anyways, learning to manage your buffers is pretty key, otherwise you may have
 a fairly lame Vim experience.
 
@@ -102,14 +103,14 @@ buffers you have open. Then, you can move around buffers like this:
 
 - `:b(number)`: (so, :b1, :b2 etc.) Move to buffer #number.
 - `:b(name)`: Move to buffer name. Supports partial matching and tab completion
-(usually)
+  (usually)
 - `:bn`: next buffer
 - `:bp`: previous buffer
 - `:bd`: close buffer
 
 Vim also supports tabs, so you can open a buffer in a new tab with :tabe, and
 then navigate through your buffers with gt (next tab) and :tabp (which
-I strongly recommend remapping)
+  I strongly recommend remapping)
 
 You can also split your window:
 
@@ -145,9 +146,10 @@ you'd expect it to. However, when pasting large blocks of text, Vim does some
 slighly strange indentation stuff, but you can get it to paste nicely with the
 following commands:
 
-- `:set paste`: goes into Paste mode - bear in mind you can only escape from paste
-mode with Esc or C-\[ - this has caught me out before
-- `:set nopaste`: exit Paste mode - always, always exit paste mode when you're dunpastin', ootherwise Vim starts to act weird.
+- `:set paste`: goes into Paste mode - bear in mind you can only escape from
+  paste mode with Esc or C-\[ - this has caught me out before
+- `:set nopaste`: exit Paste mode - always, always exit paste mode when you're
+  dunpastin', ootherwise Vim starts to act weird.
 
 Ok, if you're still with me at this stage: awesome! This is where (for me) the
 real good stuff in Vim starts to happen. Vim has certain key combinations that
@@ -160,7 +162,6 @@ sounds weird, so let me demonstrate:
 - `daw`: delete a word
 - `ct(character)`: change to character
 - `dt(character)`: delete to character
-
 - `ciw`: change inner word
 - `yaw`: yank a word
 
@@ -180,11 +181,11 @@ I need to run just a single command on the command line, I can put a bang before
 and then repeat the last command with `!!`
 
 - `:(linefrom, lineto)co.`: Copies lines to current location. So, for example,
-`:15,18co.` will copy lines 15 to 18 to where my cursor is at. Super useful for
-being lazy.
-- `gg=G`: reindent. gg takes you to the top, =G means reindent to the bottom of the
-file. Make sure you install the static vims for the filetypes you will be
-working in, as it usually provides indent information as well.
+  `:15,18co.` will copy lines 15 to 18 to where my cursor is at. Super useful
+  for being lazy.
+- `gg=G`: reindent. `gg` takes you to the top, `=G` means reindent to the bottom
+  of the file. Make sure you install the static vims for the filetypes you will
+  be working in, as it usually provides indent information as well.
 
 Customization
 -------------
@@ -213,20 +214,22 @@ highly recommends [Vundler](https://github.com/gmarik/Vundle.vim) but we promise
 not to fight. Here are a few plugins that I use a lot:
 
 - [NERDtree](https://github.com/scrooloose/nerdtree) - Gives you a tree
-structure, kinda like the Sublime folder layout, but with a Vim flavour
+  structure, kinda like the Sublime folder layout, but with a Vim flavour
 - [NERDcommenter](https://github.com/scrooloose/nerdcommenter) - Instant
-commenting, by word, line, or whatever - like Sublime's `Apple-?`
+  commenting, by word, line, or whatever - like Sublime's `Apple-?`
 - [Golden Ratio](https://github.com/roman/golden-ratio) - Great when you're
-working with splits
+  working with splits
 - [EasyMotion](https://github.com/Lokaltog/vim-easymotion) - Insane movement.
-Really, really insane
+  Really, really insane
 - [Airline](https://github.com/bling/vim-airline) - Mentioned above, great
-statusline
+  statusline
 - [CtrlP](https://github.com/kien/ctrlp.vim) or
-[CommandT](https://github.com/wincent/Command-T) for fast fuzzy finding. Like
-Sublime's `Applt-P` stuff
+  [CommandT](https://github.com/wincent/Command-T) for fast fuzzy finding. Like
+  Sublime's `Applt-P` stuff
 - [surround.vim](https://github.com/tpope/vim-surround) by Tim Pope (him again).
-  Makes surrounding and deleting surrounds super easy.
+  Makes surrounding and deleting surrounds super easy. `cs])` and those square
+  brackets are round. `ds)` and they're gone. `ysaw}` and you've surrounded
+  a word in curly braces.
 - [Vim Ruby Refactoring](https://github.com/ecomba/vim-ruby-refactoring) is
   great too. Yank blocks of code out into their own methods at one fel swoop.
 
