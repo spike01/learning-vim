@@ -11,7 +11,7 @@ Definitely disable your arrow keys. Otherwise you'll end up relying on them,
 instead of using the awesome motion commands that make Vim what it is.
 
 Here we go. Most of this is referenced from [this Vim
-cheatsheet)[http://www.lagmonster.org/docs/vi.html], but I've tried to break
+cheatsheet](http://www.lagmonster.org/docs/vi.html), but I've tried to break
 it into related blocks. 
 
 Total basics:
@@ -76,7 +76,7 @@ fun stuff:
 just type :e with what you want the file to be called. (techncally, this is
 actually "open buffer")    
 :q: quit (specifically, quit if there are no changes. Can be forced with :q!)    
-\:x: save and quit    
+: x or ZZ: save and quit (remove the space, Markdown autoformats it)   
 
 u: undo  
 C-r: redo  
@@ -222,5 +222,8 @@ Useful links
 [Your problem with Vim is that you don't grok vi.](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)  
 [Vim Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)  
 [Vim Golf](http://www.vimgolf.com/)  
-Type 'vim tutor' in the command line
-[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en)
+Type 'vimtutor' in the command line  
+[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - because you will eventually want Vim keybindings for everything  
+[Vim for the command
+line](http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal) - see above  
+

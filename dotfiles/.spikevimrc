@@ -1,0 +1,98 @@
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+set number
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set nocompatible
+set modelines=0
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+" set undofile
+let mapleader = ","
+nnoremap / /\v
+vnoremap / /\v
+" set relativenumber
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+set cursorline
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+noremap <up> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+nnoremap ; :
+au FocusLost * :wa
+inoremap jj <ESC>
+nnoremap <leader>w <C-w>v<C-w>1
+nnoremap <leader>q <C-w>q
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>v V`]
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>G :Goyo<cr>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+
+nnoremap <leader>h :bprevious<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>rs :!rspec<CR>
+nnoremap <leader>rl :!lein difftest<CR>
+nnoremap <leader>pr :!pry<CR>
+nnoremap <leader>1 :!!<CR>
+
+nnoremap <Tab> <C-W><C-W>
+nnoremap <S-Tab> <C-W>W
+nnoremap g<Tab> :tabprevious<CR> 
+
+let g:airline#extensions#tabline#enabled = 1
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+call plug#end()
+
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:airline_powerline_fonts = 1
