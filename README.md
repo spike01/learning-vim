@@ -22,7 +22,7 @@ a command; you will not be able to type until you enter insert mode. You should
 aim to spend as little time in insert mode as possible, because insert mode is
 exactly that - a mode to insert (not edit) text.
 
-Here are the main ways to enter command mode:
+Here are the main ways to enter insert mode:
 
 - `i`: insert before cursor
 - `a`: insert after cursor
