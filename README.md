@@ -251,4 +251,4 @@ Type 'vimtutor' in the command line
 [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - because you will eventually want Vim keybindings for everything  
 [Vim for the command
 line](http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal) - see above  
-
+[Big collection of Vim learning links](http://codecondo.com/vim-commands/) - Once you're done with all this, and want to keep going!
