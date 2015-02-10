@@ -252,3 +252,16 @@ Type 'vimtutor' in the command line
 [Vim for the command
 line](http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal) - see above  
 [Big collection of Vim learning links](http://codecondo.com/vim-commands/) - Once you're done with all this, and want to keep going!
+
+
+Swap files
+----------
+
+You don't want these on Github. Add this to your `.gitignore`:
+
+```
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+```
