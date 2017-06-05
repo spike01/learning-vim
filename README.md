@@ -1,5 +1,5 @@
-#Learning vim
-##A journey trying to learn the insanity that is vim.
+# Learning vim
+## A journey trying to learn the insanity that is vim.
 
 First, read this: [Coming home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
 
